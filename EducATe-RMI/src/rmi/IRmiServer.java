@@ -20,5 +20,11 @@ public interface IRmiServer extends Remote {
 	public DocenteDTO loginDocente(String tipoDocumento, int nroDocumento, String password) throws RemoteException;
 
 	public AlumnoDTO loginAlumno(String usuario, String password)throws RemoteException;
+
+	public int alumnoBuscarLeccion(int alumno, int juego) throws RemoteException;
+
+	public void alumnoAgregarEnsenianza(int alumno, int leccion, boolean resultado) throws RemoteException;
+
+	public int alumnoGetNivel(int alumno) throws RemoteException;
 	
 }

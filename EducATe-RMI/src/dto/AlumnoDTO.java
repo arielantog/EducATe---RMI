@@ -27,6 +27,7 @@ public class AlumnoDTO extends PersonaDTO implements Serializable{
 		this.puntos = puntos;
 		this.nivelLietner = nivelLietner;
 		this.activo = activo;
+		this.usuario = usuario;
 		ensenianzas = new ArrayList<EnsenianzaDTO>();
 	}
 
