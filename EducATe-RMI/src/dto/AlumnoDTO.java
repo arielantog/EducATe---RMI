@@ -6,9 +6,6 @@ import java.util.List;
 
 public class AlumnoDTO extends PersonaDTO implements Serializable{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private static int ID = 1;
 	private static final int PuntosRespuestaCorrecta = 100;
@@ -17,15 +14,13 @@ public class AlumnoDTO extends PersonaDTO implements Serializable{
 	private int puntos;
 	private List<EnsenianzaDTO> ensenianzas;
 	private AvatarDTO avatar;
-	private int nivelLietner;
 	private boolean activo;
 	private String usuario;
 
-	public AlumnoDTO(int id,String tipoDocumento, int nroDocumento, String nombre, String apellido, String usuario, String password, String mail, int puntos, int nivelLietner, boolean activo) {
+	public AlumnoDTO(int id,String tipoDocumento, int nroDocumento, String nombre, String apellido, String usuario, String password, String mail, int puntos, boolean activo) {
 		super(tipoDocumento, nroDocumento, nombre, apellido, password, mail);
 		this.id = id;
 		this.puntos = puntos;
-		this.nivelLietner = nivelLietner;
 		this.activo = activo;
 		this.usuario = usuario;
 		ensenianzas = new ArrayList<EnsenianzaDTO>();
@@ -69,14 +64,6 @@ public class AlumnoDTO extends PersonaDTO implements Serializable{
 
 	public void setAvatar(AvatarDTO avatar) {
 		this.avatar = avatar;
-	}
-
-	public int getNivelLietner() {
-		return nivelLietner;
-	}
-
-	public void setNivelLietner(int nivelLietner) {
-		this.nivelLietner = nivelLietner;
 	}
 
 	public boolean isActivo() {
