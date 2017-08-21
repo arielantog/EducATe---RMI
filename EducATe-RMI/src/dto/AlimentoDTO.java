@@ -13,14 +13,16 @@ public class AlimentoDTO implements Serializable{
 	private int proteinas;
 	private int precio;
 	private boolean activo;
+	private String url;
 	
-	public AlimentoDTO(int id, String nombre, int proteinas, int precio, boolean activo) {
+	public AlimentoDTO(int id, String nombre, int proteinas, int precio, boolean activo, String url) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.proteinas = proteinas;
 		this.precio = precio;
 		this.activo = activo;
+		this.setUrl(url);
 	}
 
 	public static int getID() {
@@ -69,6 +71,13 @@ public class AlimentoDTO implements Serializable{
 
 	public void setActivo(boolean activo) {
 		this.activo = activo;
+	}
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
 	public static long getSerialversionuid() {

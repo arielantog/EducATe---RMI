@@ -18,9 +18,10 @@ public class TipoAvatarDTO implements Serializable{
 	private int precioRevivir;
 	private List<AlimentoDTO> alimentos;
 	private boolean activo;
+	private String url;
 	
 	public TipoAvatarDTO(int id, String nombre, int alimentoMax, int tiempoHambre, int precioEvolucion,
-			int precioRevivir, boolean activo) {
+			int precioRevivir, boolean activo, String url) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -30,6 +31,7 @@ public class TipoAvatarDTO implements Serializable{
 		this.precioRevivir = precioRevivir;
 		this.alimentos = new ArrayList<AlimentoDTO>();
 		this.activo = activo;
+		this.setUrl(url);
 	}
 	public static int getID() {
 		return ID;
@@ -85,12 +87,16 @@ public class TipoAvatarDTO implements Serializable{
 	public void setActivo(boolean activo) {
 		this.activo = activo;
 	}
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url = url;
+	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 	public void agregarAlimento(AlimentoDTO alimentoDTO) {
-		alimentos.add(alimentoDTO);
-		
+		alimentos.add(alimentoDTO);	
 	}
-
 }
