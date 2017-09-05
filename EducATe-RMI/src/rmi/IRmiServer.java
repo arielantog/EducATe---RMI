@@ -2,9 +2,12 @@ package rmi;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.List;
 
+import dto.AlimentoDTO;
 import dto.AlumnoDTO;
 import dto.DocenteDTO;
+import dto.TemaDTO;
 
 public interface IRmiServer extends Remote {
 	public static final String url = "localhost/rmi";
@@ -26,5 +29,9 @@ public interface IRmiServer extends Remote {
 	public void alumnoAgregarEnsenianza(int alumno, int leccion, boolean resultado) throws RemoteException;
 
 	public int alumnoGetNivel(int alumno) throws RemoteException;
+
+	public List<TemaDTO> listarTemas() throws RemoteException;
+
+	public List<AlimentoDTO> listarAlimentos() throws RemoteException;
 	
 }
