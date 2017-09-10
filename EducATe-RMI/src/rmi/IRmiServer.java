@@ -6,6 +6,7 @@ import java.util.List;
 
 import dto.AlimentoDTO;
 import dto.AlumnoDTO;
+import dto.CursoDTO;
 import dto.DocenteDTO;
 import dto.TemaDTO;
 
@@ -33,5 +34,17 @@ public interface IRmiServer extends Remote {
 	public List<TemaDTO> listarTemas() throws RemoteException;
 
 	public List<AlimentoDTO> listarAlimentos() throws RemoteException;
+
+	public AlumnoDTO traerPerfilAlumno(String usuario) throws RemoteException;
+
+	public int modificarAlumno(String tipoDocumento, int nroDocumento, String nombre, String apellido,
+			String password, String mail, String usuario) throws RemoteException;
+
+	public int modificarDocente(String tipoDocumento, int nroDocumento, String nombre, String apellido, String mail,
+			String password) throws RemoteException;
+
+	public DocenteDTO traerPerfilDocente(String tipoDocumento, int nroDocumento) throws RemoteException;
+
+	public List<CursoDTO> listarCursosPorDocente(int docente) throws RemoteException;
 	
 }
