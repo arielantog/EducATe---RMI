@@ -48,5 +48,9 @@ public interface IRmiServer extends Remote {
 	public List<CursoDTO> listarCursosPorDocente(int docente) throws RemoteException;
 
 	public CursoDTO traerCursoDocente(int docente, int curso) throws RemoteException;
+
+	public int elegirJuegoSinTema(int nroAlumno) throws RemoteException;
+
+	public int elegirJuegoConTema(int nroAlumno, int nroTema) throws RemoteException;
 	
 }
