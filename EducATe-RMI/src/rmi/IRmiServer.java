@@ -13,9 +13,9 @@ import dto.TemaDTO;
 public interface IRmiServer extends Remote {
 	public static final String url = "localhost/rmi";
 
-	public int nuevoAlumno(String tipoDocumento, int nroDocumento, String nombre, String apellido, String usuario, String password, String mail) throws RemoteException;
+	public AlumnoDTO nuevoAlumno(String tipoDocumento, int nroDocumento, String nombre, String apellido, String usuario, String password, String mail) throws RemoteException;
 
-	public int nuevoDocente(String tipoDocumento, int nroDocumento, String nombre, String apellido, String password, String mail) throws RemoteException;
+	public DocenteDTO nuevoDocente(String tipoDocumento, int nroDocumento, String nombre, String apellido, String password, String mail) throws RemoteException;
 
 	//public int loginDocente(String tipoDocumento, int nroDocumento, String password) throws RemoteException;
 
