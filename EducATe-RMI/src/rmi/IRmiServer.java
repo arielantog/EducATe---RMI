@@ -52,5 +52,11 @@ public interface IRmiServer extends Remote {
 	public int elegirJuegoSinTema(int nroAlumno) throws RemoteException;
 
 	public int elegirJuegoConTema(int nroAlumno, int nroTema) throws RemoteException;
+
+	public void alumnoEvolucionarAvatar(int nroAlumno) throws RemoteException;
+
+	public void alumnoRevivirAvatar(int nroAlumno) throws RemoteException;
+
+	
 	
 }
