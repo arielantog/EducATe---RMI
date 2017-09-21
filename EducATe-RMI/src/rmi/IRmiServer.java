@@ -59,7 +59,7 @@ public interface IRmiServer extends Remote {
 
 	public AlumnoDTO buscarAlumnoAsignarCurso(String tipoDocumento, int nroDocumento) throws RemoteException;
 
-	public int cursoAgregarAlumno(int nroDocente, int nroCurso, int nroAlumno) throws RemoteException;
+	public CursoDTO cursoAgregarAlumno(int nroDocente, int nroCurso, int nroAlumno) throws RemoteException;
 
 	
 	
