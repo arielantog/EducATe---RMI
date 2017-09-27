@@ -32,9 +32,9 @@ public interface IRmiServer extends Remote {
 	public int alumnoGetNivel(int alumno) throws RemoteException;
 
 	public List<TemaDTO> listarTemas() throws RemoteException;
-
-	public List<AlimentoDTO> listarAlimentos(int nroTipoAvatar) throws RemoteException;
 	
+	public List<AlimentoDTO> listarAlimentos(int nroTipoAvatar) throws RemoteException;
+
 	public AlumnoDTO traerPerfilAlumno(String usuario) throws RemoteException;
 
 	public int modificarAlumno(String tipoDocumento, int nroDocumento, String nombre, String apellido,
@@ -56,7 +56,7 @@ public interface IRmiServer extends Remote {
 	public AlumnoDTO alumnoEvolucionarAvatar(int nroAlumno) throws RemoteException;
 
 	public AlumnoDTO alumnoRevivirAvatar(int nroAlumno) throws RemoteException;
-	
+
 	public AlumnoDTO buscarAlumnoAsignarCurso(String tipoDocumento, int nroDocumento) throws RemoteException;
 
 	public CursoDTO cursoAgregarAlumno(int nroDocente, int nroCurso, int nroAlumno) throws RemoteException;
